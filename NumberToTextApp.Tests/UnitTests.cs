@@ -1,76 +1,57 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NumberToTextApp.Controllers;
 using NumberToTextApp.Models;
 using Xunit;
 
-namespace NumberToTextApp.Tests
-{
-    public class HomeControllerTests
-    {
+namespace NumberToTextApp.Tests{
+    
+    public class HomeControllerTests{
         private readonly HomeController _controller;
 
-        public HomeControllerTests()
-        {
+        public HomeControllerTests(){
             _controller = new HomeController();
         }
 
         [Fact]
-        public void Index_Get_ReturnsViewResult()
-        {
-            // Act
+        public void Index_Get_ReturnsViewResult(){
             var result = _controller.Index();
-
-            // Assert
-            var viewResult = Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
 
         [Fact]
-        public void Index_Post_WithValidInput_ReturnsCorrectOutput()
-        {
-            // Arrange
-            var model = new ConversionResultModel
-            {
-                InputNumber = "123.45"
-            };
-
-            // Act
-            var result = _controller.Index(model);
-
-            // Assert
-            var viewResult = Assert.IsType<ViewResult>(result);
-            var returnedModel = Assert.IsAssignableFrom<ConversionResultModel>(viewResult.Model);
-            Assert.Equal("ONE HUNDRED AND TWENTY-THREE DOLLARS AND FORTY-FIVE CENTS", returnedModel.OutputText);
-        }
-
-        [Fact]
-        public void Converter_ValidInput_ReturnsCorrectResult()
-        {
-            // Act
+        public void Test1(){
             var result = HomeController.Converter("123.45");
-
-            // Assert
             Assert.Equal("ONE HUNDRED AND TWENTY-THREE DOLLARS AND FORTY-FIVE CENTS", result);
         }
 
         [Fact]
-        public void Converter_InputWithOnlyCents_ReturnsCorrectCents()
-        {
-            // Act
+        public void Test2(){
             var result = HomeController.Converter("0.45");
-
-            // Assert
             Assert.Equal("FORTY-FIVE CENTS", result);
         }
 
         [Fact]
-        public void Converter_InputWithCentsAndDollars_ReturnsCorrectText()
-        {
-            // Act
+        public void Test3(){
             var result = HomeController.Converter("123.99");
-
-            // Assert
             Assert.Equal("ONE HUNDRED AND TWENTY-THREE DOLLARS AND NINETY-NINE CENTS", result);
+        }
+
+        [Fact]
+        public void Test4(){
+            var result = HomeController.Converter("10");
+            Assert.Equal("TEN DOLLARS", result);
+        }
+
+        [Fact]
+        public void Test5(){
+            var result = HomeController.Converter("1");
+            Assert.Equal("ONE DOLLAR", result);
+        }
+
+        [Fact]
+        public void Test6(){
+            var result = HomeController.Converter("0.01");
+            Assert.Equal("ONE CENT", result);
         }
     }
 }

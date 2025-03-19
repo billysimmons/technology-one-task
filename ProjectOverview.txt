@@ -5,7 +5,7 @@ separately, determines its size relative to the rest of the number, and then com
 a full string representation of the number.
 
 The approach involves first breaking the number into chunks of three digits, starting from the right 
-(for example, splitting 123456789 into 123, 456, and 789). Each group of three digits is then processed 
+(e.g. splitting 123456789 into 123, 456, and 789). Each group of three digits is then processed 
 individually, converting them into their corresponding text representation (e.g., 123 becomes "One 
 Hundred and Twenty-Three").
 
@@ -18,13 +18,13 @@ into groups of three digits is modular, which makes it easy to scale and handle 
 modularity ensures that as numbers grow in size, the solution remains efficient and adaptable without 
 requiring a complete overhaul of the code.
 
-Second, by using the Model-View-Controller (MVC) design pattern, the code is well-organised and maintainable. 
+Moreover, by using the Model-View-Controller (MVC) design pattern, the code is well-organised and maintainable. 
 The separation of concerns provided by MVC makes it easier to test, update, and extend the logic in the 
 future. The model handles the core business logic, the controller manages user interactions, and the view 
 focuses on presenting the data. This structure leads to a clean and easily navigable codebase.
 
-Additionally, I implemented an xUnit test suite to ensure the accuracy of the number-to-text conversion 
-logic. This suite allows me to validate the logic against various test cases, helping to identify edge 
+Additionally, I implemented various unit tests to ensure the accuracy of the number-to-text conversion 
+logic. The tests allow me to validate the logic against various test cases, helping to identify edge 
 cases and ensuring the solution consistently provides correct results. 
 
 

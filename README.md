@@ -11,7 +11,12 @@ NOTE: Explanation of choices are in the ProjectOverview.txt file
 5. `dotnet buiid`
 6. `dotnet run`
 
-## How to test
+## How to use
+
+1. Enter the dollar amount in the tab (handles up to 2DP) and press submit
+2. The number in text will be displayed on the screen just below the submit button
+
+## How to run unit tests
 
 1. cd back into repo
 2. `cd NumberToTextApp.Tests`

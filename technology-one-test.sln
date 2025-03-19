@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToTextApp.Tests", "NumberToTextApp.Tests\NumberToTextApp.Tests.csproj", "{FF869DAC-60BF-DA63-F6FF-760AEA114055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberToTextApp", "NumberToTextApp\NumberToTextApp.csproj", "{25D42391-B24D-93FC-42CA-70A41B050E08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF869DAC-60BF-DA63-F6FF-760AEA114055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF869DAC-60BF-DA63-F6FF-760AEA114055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF869DAC-60BF-DA63-F6FF-760AEA114055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF869DAC-60BF-DA63-F6FF-760AEA114055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D42391-B24D-93FC-42CA-70A41B050E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D42391-B24D-93FC-42CA-70A41B050E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D42391-B24D-93FC-42CA-70A41B050E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D42391-B24D-93FC-42CA-70A41B050E08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3135C696-72A9-4C74-BD9A-5F62709D4218}
+	EndGlobalSection
+EndGlobal

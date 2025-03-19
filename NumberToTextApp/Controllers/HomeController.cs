@@ -6,12 +6,12 @@ namespace NumberToTextApp.Controllers;
 
 public class HomeController : Controller {
 
-    public IActionResult Index() { // handles GET requests for the Index page
+    public IActionResult Index() {
         return View();
     }
 
     [HttpPost] 
-    public IActionResult Index(ConversionResultModel model){ // handles POST requests when the form is submitted
+    public IActionResult Index(ConversionResultModel model){
 
         if (model.InputNumber == null){
             model.OutputText = "Input cannot be null";
@@ -46,33 +46,33 @@ public class HomeController : Controller {
             cents = null;
         }
 
-        if(int.Parse(dollars) == 0 && cents == null){ // 0.0 edge case
+        if(int.Parse(dollars) == 0 && cents == null){ 
             return "Value must be greater than 0";
         }
 
-        if(int.Parse(dollars) == 0){ // only cents 
+        if(int.Parse(dollars) == 0 && cents!= null){ 
             string centsString = ConvertHundredOrLess(int.Parse(cents));
             
-            if(int.Parse(cents) == 1){ // 1 CENT edge case
+            if(int.Parse(cents) == 1){
                 return $"{centsString} CENT";
-
             }
+            
             return $"{centsString} CENTS";
         }
 
-        if(cents == null){ // only dollars
+        if(cents == null){
             string dollarsString = ConvertDollar(int.Parse(dollars));
-            if(int.Parse(dollars) == 1){ // 1 DOLLAR edge case
+            if(int.Parse(dollars) == 1){
                 return $"{dollarsString}DOLLAR";
             }
             return $"{dollarsString}DOLLARS";
         }
 
-        if(cents != null){ // both cents and dollars
+        if(cents != null){
             string dollarsString = ConvertDollar(int.Parse(dollars));
             string centsString = ConvertHundredOrLess(int.Parse(cents));
 
-            if(int.Parse(cents) == 1){ // 1 CENT edge case
+            if(int.Parse(cents) == 1){
                 return $"{dollarsString}DOLLARS AND {centsString} CENT";
             }
             return $"{dollarsString}DOLLARS AND {centsString} CENTS";
@@ -95,7 +95,7 @@ public class HomeController : Controller {
             if (startIndex < 0) startIndex = 0; 
             string group = numString.Substring(startIndex, length - startIndex);  
 
-            if (int.Parse(group) > 0){ // non 0 group
+            if (int.Parse(group) > 0){
                 string item = ConvertHundredOrLess(int.Parse(group)) + " " + ConversionMappingModel.intToGroup[groupCount];
                 resultList.Add(item);
             }
@@ -112,8 +112,8 @@ public class HomeController : Controller {
         string result = "";
         
         if(num >= 100){
-            result += ConversionMappingModel.intToText[num / 100] + " HUNDRED"; // divide by 100 for the hundreds digit (e.g. 1 for 123)
-            num %= 100; // to get remainder of /100 (e.g. 23 for 123)
+            result += ConversionMappingModel.intToText[num / 100] + " HUNDRED";
+            num %= 100; 
             
             if (num != 0){
                 result += " AND ";

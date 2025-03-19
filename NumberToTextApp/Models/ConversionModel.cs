@@ -1,8 +1,8 @@
 namespace NumberToTextApp.Models {
 
     public class ConversionResultModel {
-        public string InputNumber { get; set; }
-        public string OutputText { get; set; }
+        public required string InputNumber { get; set; }
+        public required string OutputText { get; set; } = "";
     }
 
     public class ConversionMappingModel {

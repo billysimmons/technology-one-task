@@ -12,7 +12,6 @@
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/NumberToTextApp.staticwebassets.runtime.json
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/NumberToTextApp.staticwebassets.endpoints.json
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/NumberToTextApp
-/Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/xunit.runner.visualstudio.testadapter.dll
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/NumberToTextApp.Tests.deps.json
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/NumberToTextApp.Tests.runtimeconfig.json
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/NumberToTextApp.Tests.dll
@@ -105,3 +104,5 @@
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/obj/Debug/net9.0/NumberToTextApp.Tests.pdb
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/obj/Debug/net9.0/NumberToTextApp.Tests.genruntimeconfig.cache
 /Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/obj/Debug/net9.0/ref/NumberToTextApp.Tests.dll
+/Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/obj/Debug/net9.0/NumberToTextApp.Tests.sourcelink.json
+/Users/bisimmons/Personal/CODE/technology-one-test/NumberToTextApp.Tests/bin/Debug/net9.0/xunit.runner.visualstudio.testadapter.dll
