@@ -29,5 +29,5 @@ May have to install the following:
 
 ## Assumptions:
 
-Number isn’t greater than the int32 max of 2_147_483_647
-Cents are rounded to 2dp
+- Number isn’t greater than the int32 max of 2_147_483_647
+- Cents are rounded to 2dp
