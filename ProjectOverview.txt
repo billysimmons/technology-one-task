@@ -1,5 +1,4 @@
-PROJECT OVERVIEW
-
+PROJECT OVERVIEW:
 Being familiar with this problem, I wanted to figure out a new solution I haven’t seen before online. 
 I went with a strategy that divides the number into groups of three digits, processes each group of 3 
 separately, determines its size relative to the rest of the number, and then combines the results into 
@@ -27,3 +26,15 @@ focuses on presenting the data. This structure leads to a clean and easily navig
 Additionally, I implemented an xUnit test suite to ensure the accuracy of the number-to-text conversion 
 logic. This suite allows me to validate the logic against various test cases, helping to identify edge 
 cases and ensuring the solution consistently provides correct results. 
+
+
+TIME COMPLEXITY:
+The time complexity of the Controller is O(d), d representing the number of digits in the input number. 
+
+This is because the main loop processes the digits in groups of three, and each group requires constant 
+time operations. After the loop, the reversal and string joining steps also take time proportional to the 
+number of groups, which is directly related to the number of digits. Hence, the overall time complexity is 
+linear with respect to the number of digits in the input (O(d))
+
+The ConvertHundredOrLess method operates in constant time O(1), as it performs a fixed number of operations. 
+Meaning it operated in constant time O(1) and doesn’t affect the overall complexity.
