@@ -1,0 +1,29 @@
+PROJECT OVERVIEW
+
+Being familiar with this problem, I wanted to figure out a new solution I haven’t seen before online. 
+I went with a strategy that divides the number into groups of three digits, processes each group of 3 
+separately, determines its size relative to the rest of the number, and then combines the results into 
+a full string representation of the number.
+
+The approach involves first breaking the number into chunks of three digits, starting from the right 
+(for example, splitting 123456789 into 123, 456, and 789). Each group of three digits is then processed 
+individually, converting them into their corresponding text representation (e.g., 123 becomes "One 
+Hundred and Twenty-Three").
+
+Once all groups are processed, the method determines the appropriate scale for each group based on its 
+position in the number (thousands, millions, etc.) then combines these parts back together into a single 
+string, ensuring proper formatting. 
+
+There are several benefits of my approach over other approaches. Firstly, the logic for dividing numbers 
+into groups of three digits is modular, which makes it easy to scale and handle very large numbers. This 
+modularity ensures that as numbers grow in size, the solution remains efficient and adaptable without 
+requiring a complete overhaul of the code.
+
+Second, by using the Model-View-Controller (MVC) design pattern, the code is well-organised and maintainable. 
+The separation of concerns provided by MVC makes it easier to test, update, and extend the logic in the 
+future. The model handles the core business logic, the controller manages user interactions, and the view 
+focuses on presenting the data. This structure leads to a clean and easily navigable codebase.
+
+Additionally, I implemented an xUnit test suite to ensure the accuracy of the number-to-text conversion 
+logic. This suite allows me to validate the logic against various test cases, helping to identify edge 
+cases and ensuring the solution consistently provides correct results. 

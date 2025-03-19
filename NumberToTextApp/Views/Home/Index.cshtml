@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Number To Text Converter";
+}
+
+@model NumberToTextApp.Models.ConversionResultModel
+
+<div class="d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 90vh;">
+    <h1 style="margin-bottom: 20px;">Number To Text Converter</h1>
+    <p>Simply input a dollar amount, and let us convert it into its written equivalent.</p>
+
+    <div class="d-flex justify-content-center align-items-center" style="width: 100%;">
+        <div class="bg-gray border p-4" style="width: 50%; height: 50vh; background-color: #f0f0f0; border-radius: 8px;">
+            <form method="post">
+                <label for="InputNumber" style="font-weight: bold;">Input Number:</label>
+                <input class="form-control w-100" type="number" step="any" placeholder="0" asp-for="InputNumber" style="margin-top: 10px;" />
+
+                <button class="btn btn-primary mt-4 p-2" type="submit" style="width: 30%; background-color: #FEBE11; border-color: #FEBE11;">Submit</button>
+            </form>
+            <div class="d-flex justify-content-center align-items-center" style="height: 50%;">
+                @if (!string.IsNullOrEmpty(Model?.OutputText))
+                {
+                    <p style="font-weight: bold; color: #333;">@Model.OutputText</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#helpModal" style="background-color:#FEBE11; border-color: #FEBE11; width: 100px;">Help</button>
+
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border-radius: 10px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel">Help</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 20px;">
+                    <p>Here you can convert a number to its text representation. Simply input a number and click "Submit" to see the text equivalent. The system can handle both whole numbers and decimals.</p>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>Enter the number in the input field.</li>
+                        <li>Click "Submit" to convert the number to text.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #6c757d; border-color: #6c757d;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
