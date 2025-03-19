@@ -1,5 +1,7 @@
 # Technology-one-task
 
+NOTE: Explanation of choices are in the ProjectOverview.txt file
+
 ## How to build App
 
 1. Clone this repo
